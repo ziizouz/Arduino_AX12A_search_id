@@ -1,0 +1,27 @@
+This is a simple function for Arduino to be used with AX12A.
+
+I have written this code to check whether AX12A servo is working or not.
+I didn't know the ID and BaudRate stored in the EEPROM of the servo.
+
+This code is a basic brute force funciton that will go through all 
+possible values of BaudeRate and ID allowed in AX12A datasheet
+
+If the appropriate configuration is found, the motor will start rotating 
+
+By adjusting the delays, you can make the brute force method run faster
+
+Once the servo starts rotating, you can conclude that your wiring and 
+your servo are working properly.
+
+
+I have used AX12A library which worked perfectly for me.
+You can get it from here: https://github.com/jumejume1/AX-12A-servo-library
+
+I have also used 74LS241N tri-state buffer to control UART 
+communication.
+Communication control pin is pin number 2.
+
+The circuit which I used is based on the following diagram:
+https://www.savageelectronics.com/blog/arduino-biblioteca-dynamixel
+
+Tested on Arduino Uno R3
